@@ -96,7 +96,7 @@
                                         </a>
                                     </div>
                                     <div class="main-slider__map">
-                                        <img src="/site/images/main-slider-map-1.png" alt="" class="float-bob-y">
+                                        <img src="/site/images/main-slider-map-1.png" alt="" class="float-bob-y" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                         <div class="item">
                             <div class="services-two__single">
                                 <div class="services-two__img">
-                                    <img src="{{ $service->image ? $service->image->path : 'https://placehold.co/600x400' }}" alt="{{ $service->name }}">
+                                    <img src="{{ $service->image ? $service->image->path : 'https://placehold.co/600x400' }}" alt="{{ $service->name }}" loading="lazy">
                                 </div>
                                 <div class="services-two__content">
                                     <div class="services-two__icon">
@@ -197,11 +197,11 @@
                         <div class="about-two__img-box">
                             @foreach ($about->galleries as $key => $gallery)
                                 <div class="{{ $key == 0 ? 'about-two__img' : 'about-two__img-two' }}">
-                                    <img src="{{ $gallery->image ? $gallery->image->path : 'https://placehold.co/600x400' }}" alt="">
+                                    <img src="{{ $gallery->image ? $gallery->image->path : 'https://placehold.co/600x400' }}" alt="" loading="lazy">
                                 </div>
                             @endforeach
                             <div class="about-two__counter">
-                                <div class="shape1"><img src="/site/images/about-two-shape-1.png" alt="">
+                                <div class="shape1"><img src="/site/images/about-two-shape-1.png" alt="" loading="lazy">
                                 </div>
                                 <div class="count-text-box count-box">
                                     <h2 class="count-text" data-stop="10" data-speed="1500">00</h2>
@@ -212,13 +212,13 @@
                                 </p>
                             </div>
                             <div class="about-two__shape-2 float-bob-x">
-                                <img src="/site/images/about-two-shape-2.png" alt="">
+                                <img src="/site/images/about-two-shape-2.png" alt="" loading="lazy">
                             </div>
                             <div class="about-two__shape-3">
-                                <img src="/site/images/about-two-shape-3.png" alt="">
+                                <img src="/site/images/about-two-shape-3.png" alt="" loading="lazy">
                             </div>
                             <div class="about-two__shape-4 float-bob-y">
-                                <img src="/site/images/about-two-shape-4.png" alt="">
+                                <img src="/site/images/about-two-shape-4.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                                 <div class="about-two__author-details">
                                     <div class="about-two__author-img-box">
                                         <div class="about-two__author-img">
-                                            <img src="{{ $about->image ? $about->image->path : 'https://placehold.co/100x100' }}" alt="">
+                                            <img src="{{ $about->image ? $about->image->path : 'https://placehold.co/100x100' }}" alt="" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="about-two__author-content">
@@ -299,28 +299,28 @@
             </div>
         </div>
         <div class="why-choose-two__img reveal">
-            <img src="/site/images/why-choose-two-img-1.png" alt="">
+            <img src="/site/images/why-choose-two-img-1.png" alt="" loading="lazy">
         </div>
         <div class="why-choose-two__client-box">
             <ul class="why-choose-two__review-list">
                 <li>
                     <div class="why-choose-two__review-img">
-                        <img src="/site/images/why-choose-two-review-img-1-1.jpg" alt="">
+                        <img src="/site/images/why-choose-two-review-img-1-1.jpg" alt="" loading="lazy">
                     </div>
                 </li>
                 <li>
                     <div class="why-choose-two__review-img">
-                        <img src="/site/images/why-choose-two-review-img-1-2.jpg" alt="">
+                        <img src="/site/images/why-choose-two-review-img-1-2.jpg" alt="" loading="lazy">
                     </div>
                 </li>
                 <li>
                     <div class="why-choose-two__review-img">
-                        <img src="/site/images/why-choose-two-review-img-1-3.jpg" alt="">
+                        <img src="/site/images/why-choose-two-review-img-1-3.jpg" alt="" loading="lazy">
                     </div>
                 </li>
                 <li>
                     <div class="why-choose-two__review-img">
-                        <img src="/site/images/why-choose-two-review-img-1-4.jpg" alt="">
+                        <img src="/site/images/why-choose-two-review-img-1-4.jpg" alt="" loading="lazy">
                     </div>
                 </li>
             </ul>
@@ -577,7 +577,7 @@
                         <div class="testimonial-two__single">
                             <div class="testimonial-two__single-inner">
                                 <div class="testimonial-two__shape-1">
-                                    <img src="/site/images/testimonial-two-shape-1.png" alt="">
+                                    <img src="/site/images/testimonial-two-shape-1.png" alt="" loading="lazy">
                                 </div>
                                 <div class="testimonial-two__quote">
                                     <i class="fas fa-quote-left"></i>
@@ -594,7 +594,7 @@
                                 </p>
                                 <div class="testimonial-two__client-info">
                                     <div class="testimonial-two__client-img">
-                                        <img src="{{$review->image ? $review->image->path : 'https://placehold.co/100x100' }}" alt="">
+                                        <img src="{{$review->image ? $review->image->path : 'https://placehold.co/100x100' }}" alt="" loading="lazy">
                                     </div>
                                     <div class="testimonial-two__client-content">
                                         <h3><a href="">{{ $review->name }}</a></h3>
@@ -751,7 +751,7 @@
                 <div class="col-xl-4 col-lg-6  wow fadeInLeft" data-wow-delay="100ms">
                     <div class="blog-two__single">
                         <div class="blog-two__img">
-                            <img src="{{ $post->image ? $post->image->path : 'https://placehold.co/300x200' }}" alt="">
+                            <img src="{{ $post->image ? $post->image->path : 'https://placehold.co/300x200' }}" alt="" loading="lazy">
                             <div class="blog-two__plus">
                                 <a href="{{ route('front.blogDetail', $post->slug) }}"><i class="icon-plus"></i></a>
                             </div>
@@ -789,7 +789,7 @@
                     <div class="brand-one__single-inner">
                         <a href="{{ $partner->link }}"><img
                                 src="{{ $partner->image ? $partner->image->path : 'https://placehold.co/200x100' }}"
-                                alt="{{ $partner->name }}"></a>
+                                alt="{{ $partner->name }}" loading="lazy"></a>
                     </div>
                 </div>
                 @endforeach

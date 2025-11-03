@@ -22,10 +22,10 @@
         <div class="container">
             <div class="page-header__inner">
                 <div class="page-header__img-1">
-                    <img src="/site/images/page-header-img-1.png" alt="">
+                    <img src="/site/images/page-header-img-1.png" alt="" loading="lazy">
                 </div>
                 <div class="page-header__shape-1 float-bob-y">
-                    <img src="/site/images/page-header-shape-1.png" alt="">
+                    <img src="/site/images/page-header-shape-1.png" alt="" loading="lazy">
                 </div>
                 <h3>{{ $categoryService->name }}</h3>
                 <div class="thm-breadcrumb__inner">
@@ -49,7 +49,7 @@
                         <div class="item">
                             <div class="services-two__single">
                                 <div class="services-two__img">
-                                    <img src="{{ $service->image ? $service->image->path : 'https://placehold.co/600x400' }}" alt="{{ $service->name }}">
+                                    <img src="{{ $service->image ? $service->image->path : 'https://placehold.co/600x400' }}" alt="{{ $service->name }}" loading="lazy">
                                 </div>
                                 <div class="services-two__content">
                                     <div class="services-two__icon">

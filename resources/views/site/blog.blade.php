@@ -36,10 +36,10 @@
         <div class="container">
             <div class="page-header__inner">
                 <div class="page-header__img-1">
-                    <img src="/site/images/page-header-img-1.png" alt="">
+                    <img src="/site/images/page-header-img-1.png" alt="" loading="lazy">
                 </div>
                 <div class="page-header__shape-1 float-bob-y">
-                    <img src="/site/images/page-header-shape-1.png" alt="">
+                    <img src="/site/images/page-header-shape-1.png" alt="" loading="lazy">
                 </div>
                 <h3>{{ $categoryBlog->name ?? 'Tin tức và hoạt động' }}</h3>
                 <div class="thm-breadcrumb__inner">
@@ -62,7 +62,7 @@
                 <div class="col-xl-4 col-lg-6  wow fadeInLeft" data-wow-delay="100ms">
                     <div class="blog-two__single">
                         <div class="blog-two__img">
-                            <img src="{{ $post->image ? $post->image->path : 'https://placehold.co/300x200' }}" alt="">
+                            <img src="{{ $post->image ? $post->image->path : 'https://placehold.co/300x200' }}" alt="" loading="lazy">
                             <div class="blog-two__plus">
                                 <a href="{{ route('front.blogDetail', $post->slug) }}"><i class="icon-plus"></i></a>
                             </div>

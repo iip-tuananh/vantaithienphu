@@ -35,7 +35,7 @@
             <div class="main-menu-two__wrapper-inner">
                 <div class="main-menu-two__left">
                     <div class="main-menu-two__logo">
-                        <a href="{{ route('front.home-page') }}"><img src="{{ $config->image ? $config->image->path : 'https://placehold.co/100x100' }}" alt="{{ $config->web_title }}"></a>
+                        <a href="{{ route('front.home-page') }}"><img src="{{ $config->image ? $config->image->path : 'https://placehold.co/100x100' }}" alt="{{ $config->web_title }}" loading="lazy"></a>
                     </div>
                 </div>
                 <div class="main-menu-two__main-menu-box">

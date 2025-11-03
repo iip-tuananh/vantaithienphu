@@ -1,7 +1,7 @@
 <!--Site Footer Two Start-->
 <footer class="site-footer-two">
     <div class="site-footer-two__shape-1 float-bob-x">
-        <img src="/site/images/site-footer-two-shape-1.png" alt="">
+        <img src="/site/images/site-footer-two-shape-1.png" alt="" loading="lazy">
     </div>
     <div class="container">
         <div class="site-footer-two__top">
@@ -9,7 +9,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                     <div class="footer-widget-two__column footer-widget-two__about">
                         <div class="footer-widget-two__logo">
-                            <a href="{{ route('front.home-page') }}"><img src="{{ $config->image ? $config->image->path : 'https://placehold.co/100x100' }}" alt="{{ $config->web_title }}"></a>
+                            <a href="{{ route('front.home-page') }}"><img src="{{ $config->image ? $config->image->path : 'https://placehold.co/100x100' }}" alt="{{ $config->web_title }}" loading="lazy"></a>
                         </div>
                         <p class="footer-widget-two__about-text">{!! $config->introduction !!}</p>
                         <ul class="footer-widget-two__contact list-unstyled">

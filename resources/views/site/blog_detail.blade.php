@@ -22,10 +22,10 @@
         <div class="container">
             <div class="page-header__inner">
                 <div class="page-header__img-1">
-                    <img src="/site/images/page-header-img-1.png" alt="">
+                    <img src="/site/images/page-header-img-1.png" alt="" loading="lazy">
                 </div>
                 <div class="page-header__shape-1 float-bob-y">
-                    <img src="/site/images/page-header-shape-1.png" alt="">
+                    <img src="/site/images/page-header-shape-1.png" alt="" loading="lazy">
                 </div>
                 <h3>{{ $blog->name }}</h3>
                 <div class="thm-breadcrumb__inner">
@@ -46,7 +46,7 @@
                 <div class="col-xl-8 col-lg-7">
                     <div class="blog-details__left">
                         <div class="blog-details__img">
-                            <img src="{{ $blog->image ? $blog->image->path : 'https://placehold.co/600x400' }}" alt="{{ $blog->name }}">
+                            <img src="{{ $blog->image ? $blog->image->path : 'https://placehold.co/600x400' }}" alt="{{ $blog->name }}" loading="lazy">
                         </div>
                         <div class="blog-details__content">
                             <div class="blog-details__user-and-meta">
@@ -105,7 +105,7 @@
                                 @foreach ($otherBlogs as $otherBlog)
                                     <div class="sidebar__post-single">
                                         <div class="sidebar-post__img">
-                                            <img src="{{ $otherBlog->image ? $otherBlog->image->path : 'https://placehold.co/200x100' }}" alt="{{ $otherBlog->name }}">
+                                            <img src="{{ $otherBlog->image ? $otherBlog->image->path : 'https://placehold.co/200x100' }}" alt="{{ $otherBlog->name }}" loading="lazy">
                                         </div>
                                         <div class="sidebar__post-content-box">
                                             <h3><a href="{{ route('front.blogDetail', $otherBlog->slug) }}">{{ $otherBlog->name }}</a>

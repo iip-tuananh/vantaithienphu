@@ -22,10 +22,10 @@
         <div class="container">
             <div class="page-header__inner">
                 <div class="page-header__img-1">
-                    <img src="/site/images/page-header-img-1.png" alt="">
+                    <img src="/site/images/page-header-img-1.png" alt="" loading="lazy">
                 </div>
                 <div class="page-header__shape-1 float-bob-y">
-                    <img src="/site/images/page-header-shape-1.png" alt="">
+                    <img src="/site/images/page-header-shape-1.png" alt="" loading="lazy">
                 </div>
                 <h3>{{ $service->name }}</h3>
                 <div class="thm-breadcrumb__inner">
@@ -60,7 +60,7 @@
                         <div class="service-details__sidebar-contact">
                             <div class="service-details__sidebar-contact-img">
                                 <div class="inner">
-                                    <img src="/site/images/service-details-sidebar-img.png" alt="">
+                                    <img src="/site/images/service-details-sidebar-img.png" alt="" loading="lazy">
                                 </div>
                             </div>
                             <div class="service-details__sidebar-contact-content">
@@ -76,7 +76,7 @@
                 <div class="col-xl-8 col-lg-7">
                     <div class="service-details__left">
                         <div class="service-details__img">
-                            <img src="{{ $service->image ? $service->image->path : 'https://placehold.co/200x100' }}" alt="{{ $service->name }}">
+                            <img src="{{ $service->image ? $service->image->path : 'https://placehold.co/200x100' }}" alt="{{ $service->name }}" loading="lazy">
                         </div>
                         <h3 class="service-details__title-1">{{ $service->name }}</h3>
                         <p class="service-details__text-1">{{ $service->description }}</p>

@@ -60,10 +60,10 @@
         <div class="container">
             <div class="page-header__inner">
                 <div class="page-header__img-1">
-                    <img src="/site/images/page-header-img-1.png" alt="">
+                    <img src="/site/images/page-header-img-1.png" alt="" loading="lazy">
                 </div>
                 <div class="page-header__shape-1 float-bob-y">
-                    <img src="/site/images/page-header-shape-1.png" alt="">
+                    <img src="/site/images/page-header-shape-1.png" alt="" loading="lazy">
                 </div>
                 <h3>Liên hệ</h3>
                 <div class="thm-breadcrumb__inner">

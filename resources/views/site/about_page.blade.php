@@ -22,10 +22,10 @@
         <div class="container">
             <div class="page-header__inner">
                 <div class="page-header__img-1">
-                    <img src="/site/images/page-header-img-1.png" alt="">
+                    <img src="/site/images/page-header-img-1.png" alt="" loading="lazy">
                 </div>
                 <div class="page-header__shape-1 float-bob-y">
-                    <img src="/site/images/page-header-shape-1.png" alt="">
+                    <img src="/site/images/page-header-shape-1.png" alt="" loading="lazy">
                 </div>
                 <h3>Về chúng tôi</h3>
                 <div class="thm-breadcrumb__inner">
@@ -49,11 +49,11 @@
                             @foreach ($about->galleries as $key => $gallery)
                                 <div class="{{ $key == 0 ? 'about-two__img' : 'about-two__img-two' }}">
                                     <img src="{{ $gallery->image ? $gallery->image->path : 'https://placehold.co/600x400' }}"
-                                        alt="">
+                                        alt="" loading="lazy">
                                 </div>
                             @endforeach
                             <div class="about-two__counter">
-                                <div class="shape1"><img src="/site/images/about-two-shape-1.png" alt="">
+                                <div class="shape1"><img src="/site/images/about-two-shape-1.png" alt="" loading="lazy">
                                 </div>
                                 <div class="count-text-box count-box">
                                     <h2 class="count-text" data-stop="10" data-speed="1500">00</h2>
@@ -64,13 +64,13 @@
                                 </p>
                             </div>
                             <div class="about-two__shape-2 float-bob-x">
-                                <img src="/site/images/about-two-shape-2.png" alt="">
+                                <img src="/site/images/about-two-shape-2.png" alt="" loading="lazy">
                             </div>
                             <div class="about-two__shape-3">
-                                <img src="/site/images/about-two-shape-3.png" alt="">
+                                <img src="/site/images/about-two-shape-3.png" alt="" loading="lazy">
                             </div>
                             <div class="about-two__shape-4 float-bob-y">
-                                <img src="/site/images/about-two-shape-4.png" alt="">
+                                <img src="/site/images/about-two-shape-4.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                             <div class="services-two__single">
                                 <div class="services-two__img">
                                     <img src="{{ $service->image ? $service->image->path : 'https://placehold.co/600x400' }}"
-                                        alt="{{ $service->name }}">
+                                        alt="{{ $service->name }}" loading="lazy">
                                 </div>
                                 <div class="services-two__content">
                                     <div class="services-two__icon">
@@ -249,7 +249,7 @@
                         <div class="brand-one__single-inner">
                             <a href="{{ $partner->link }}"><img
                                     src="{{ $partner->image ? $partner->image->path : 'https://placehold.co/200x100' }}"
-                                    alt="{{ $partner->name }}"></a>
+                                    alt="{{ $partner->name }}" loading="lazy"></a>
                         </div>
                     </div>
                 @endforeach
