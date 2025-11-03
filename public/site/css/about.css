@@ -804,6 +804,9 @@
     display: block;
     /* max-width: 315px; */
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .about-two__point-one li {
@@ -812,6 +815,13 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    width: 48%;
+}
+
+@media (max-width: 768px) {
+    .about-two__point-one li {
+        width: 100%;
+    }
 }
 
 .about-two__point-one li+li {

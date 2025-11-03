@@ -132,7 +132,7 @@
             <div class="row">
                 <!--Services Two Single Start-->
                 @foreach ($services as $service)
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-3">
                         <div class="item">
                             <div class="services-two__single">
                                 <div class="services-two__img">
@@ -242,9 +242,9 @@
                         </div>
                         {!! $about->intro_text !!}
                         <div class="about-two__point-box-one mt-2">
-                            <ul class="about-two__point-one" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <ul class="about-two__point-one">
                                 @foreach ($about->results as $key => $result)
-                                <li style="width: 48%;">
+                                <li>
                                     <div class="icon">
                                         <span class="fas fa-check"></span>
                                     </div>
