@@ -827,7 +827,7 @@ Services Three
 .service-details__services-box {
     position: relative;
     display: block;
-    padding: 31px 35px 40px;
+    padding: 20px 20px 30px;
     background-color: var(--tanspot-primary);
     border-radius: var(--tanspot-bdr-radius);
 }
