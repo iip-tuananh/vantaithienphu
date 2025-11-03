@@ -66,23 +66,46 @@
     <!--End Preloader-->
     <div class="chat-icon"><button type="button" class="chat-toggler"><i class="fa fa-comment"></i></button></div>
     <!--Chat Popup-->
-    <div id="chat-popup" class="chat-popup">
+    <div id="chat-popup" class="chat-popup" ng-controller="PopupContactPage">
         <div class="popup-inner">
             <div class="close-chat"><i class="fa fa-times"></i></div>
             <div class="chat-form">
                 <p>Để lại thông tin của bạn để chúng tôi có thể liên hệ với bạn.</p>
-                <form action="" method="POST" class="contact-form-validated">
+                <form class="contact-form-validated" id="form-contact">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Tên của bạn" required>
+                        <div class="invalid-feedback d-block error" role="alert">
+                            <span ng-if="errors && errors.name">
+                                <% errors.name[0] %>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="phone" placeholder="Số điện thoại của bạn" required>
+                        <div class="invalid-feedback d-block error" role="alert">
+                            <span ng-if="errors && errors.phone">
+                                <% errors.phone[0] %>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" placeholder="Email của bạn" required>
+                        <div class="invalid-feedback d-block error" role="alert">
+                            <span ng-if="errors && errors.email">
+                                <% errors.email[0] %>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <textarea name="message" placeholder="Nội dung của bạn" required></textarea>
+                        <div class="invalid-feedback d-block error" role="alert">
+                            <span ng-if="errors && errors.message">
+                                <% errors.message[0] %>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group message-btn">
-                        <button type="submit" class="thm-btn"> Gửi
+                        <button type="button" class="thm-btn" ng-click="submitContact()"> Gửi
                             <span><i class="icon-right-arrow"></i></span>
                         </button>
                     </div>
@@ -91,6 +114,7 @@
             </div>
         </div>
     </div>
+
     <!-- End sidebar widget content -->
     <div class="page-wrapper">
         @include('site.partials.header')
@@ -184,6 +208,45 @@
 
     @include('site.partials.angular_mix')
     @stack('scripts')
+    <script>
+        app.controller('PopupContactPage', function($rootScope, $scope, $sce, $interval) {
+            $scope.errors = {};
+            $scope.sendSuccess = false;
+
+            $scope.submitContact = function() {
+                var url = "{{ route('front.submitContact') }}";
+                var data = jQuery('#form-contact').serialize();
+                $scope.loading = true;
+                jQuery.ajax({
+                    type: 'POST',
+                    url: url,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: data,
+                    success: function(response) {
+                        if (response.success) {
+                            toastr.success(response.message);
+                            jQuery('#form-contact')[0].reset();
+                            $scope.errors = {};
+                            $scope.sendSuccess = true;
+                            $scope.$apply();
+                        } else {
+                            $scope.errors = response.errors;
+                            toastr.warning(response.message);
+                        }
+                    },
+                    error: function() {
+                        toastr.error('Đã có lỗi xảy ra');
+                    },
+                    complete: function() {
+                        $scope.loading = false;
+                        $scope.$apply();
+                    }
+                });
+            }
+        })
+    </script>
 </body>
 
 </html>
