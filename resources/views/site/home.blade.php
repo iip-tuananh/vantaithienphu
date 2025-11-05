@@ -143,11 +143,11 @@
                                         <span class="icon-truck"></span>
                                     </div>
                                     <div class="services-two__title">
-                                        <h3><a href="{{ route('front.services', $service->slug) }}">{{ $service->name }}</a></h3>
+                                        <h3><a href="{{ route('front.getServiceDetail', $service->slug) }}">{{ $service->name }}</a></h3>
                                     </div>
-                                    <p class="services-two__text">
+                                    <div class="services-two__text limit-3-line">
                                         {!! $service->description !!}
-                                    </p>
+                                    </div>
                                     <ul class="services-two__point">
                                         <li>
                                             <div class="icon">
@@ -175,7 +175,7 @@
                                         </li>
                                     </ul>
                                     <div class="services-two__btn">
-                                        <a href="{{ route('front.services', $service->slug) }}">Chi Tiết <span class="icon-next"></span>
+                                        <a href="{{ route('front.getServiceDetail', $service->slug) }}">Chi Tiết <span class="icon-next"></span>
                                         </a>
                                     </div>
                                 </div>
@@ -502,7 +502,7 @@
                         <div class="contact-one__content">
                             <p class="contact-one__tagline">Chúng tôi báo giá trong vòng 30 phút!</p>
                             <h2 class="contact-one__title">Yêu Cầu Báo Giá</h2>
-                            <form class="contact-one__form" id="form-contact">
+                            <form class="contact-one__form" id="home-form-contact">
                                 <div class="contact-one__content-box">
                                     <div class="contact-one__input-box">
                                         <input type="text" placeholder="Tên Của Bạn" name="name" >
@@ -530,10 +530,10 @@
                                         </div>
                                     </div>
                                     <div class="contact-one__input-box">
-                                        <input type="text" placeholder="Loại Hàng Hóa" name="subject" >
+                                        <input type="text" placeholder="Loại Hàng Hóa" name="message" >
                                         <div class="invalid-feedback d-block error" role="alert">
-                                            <span ng-if="errors && errors.subject">
-                                                <% errors.subject[0] %>
+                                            <span ng-if="errors && errors.message">
+                                                <% errors.message[0] %>
                                             </span>
                                         </div>
                                     </div>
@@ -807,7 +807,7 @@
 
             $scope.submitContact = function() {
                 var url = "{{ route('front.submitContact') }}";
-                var data = jQuery('#form-contact').serialize();
+                var data = jQuery('#home-form-contact').serialize();
                 $scope.loading = true;
                 jQuery.ajax({
                     type: 'POST',

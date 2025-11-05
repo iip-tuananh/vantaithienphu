@@ -816,6 +816,7 @@ class FrontController extends Controller
             'name'  => 'required',
             'message'  => 'required',
             'phone' => 'required|regex:/^(0)[0-9]{9,11}$/',
+            'email' => 'nullable|email|max:255|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
         ];
 
         $validate = Validator::make(

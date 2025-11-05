@@ -12,6 +12,14 @@
 
 @section('css')
     <link rel="stylesheet" href="/site/css/page-header.css" />
+    <style>
+        .limit-3-line {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -58,9 +66,9 @@
                                     <div class="services-two__title">
                                         <h3><a href="{{ route('front.getServiceDetail', $service->slug) }}">{{ $service->name }}</a></h3>
                                     </div>
-                                    <p class="services-two__text">
+                                    <div class="services-two__text limit-3-line">
                                         {!! $service->description !!}
-                                    </p>
+                                    </div>
                                     <ul class="services-two__point">
                                         <li>
                                             <div class="icon">

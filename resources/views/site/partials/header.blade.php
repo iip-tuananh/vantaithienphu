@@ -78,6 +78,19 @@
                 </div>
                 <div class="main-menu-two__right">
                     <div class="main-menu-two__right-content">
+
+                        <div class="main-menu-two__search-cart-box">
+                            <div class="main-menu-two__search-cart-box">
+                                <div class="main-menu-two__search-box">
+                                    <a href="#"
+                                        class="main-menu-two__search searcher-toggler-box icon-search"></a>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <div class="main-menu-two__btn-box">
+                            <a href="{{ route('front.contact') }}" class="thm-btn">Track Order<span><i
+                                        class="icon-right-arrow"></i></span></a>
+                        </div> --}}
                         <div class="main-menu-two__call">
                             <div class="main-menu-two__call-icon">
                                 <i class="icon-phone-call"></i>
@@ -87,18 +100,6 @@
                                 <h5 class="main-menu-two__call-number"><a href="tel:{{ str_replace(' ', '', $config->hotline) }}">{{ $config->hotline }}</a>
                                 </h5>
                             </div>
-                        </div>
-                        <div class="main-menu-two__search-cart-box">
-                            <div class="main-menu-two__search-cart-box">
-                                <div class="main-menu-two__search-box">
-                                    <a href="#"
-                                        class="main-menu-two__search searcher-toggler-box icon-search"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main-menu-two__btn-box">
-                            <a href="{{ route('front.contact') }}" class="thm-btn">Track Order<span><i
-                                        class="icon-right-arrow"></i></span></a>
                         </div>
                     </div>
                 </div>

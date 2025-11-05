@@ -80,7 +80,7 @@
                         </div>
                         <h3 class="service-details__title-1">{{ $service->name }}</h3>
                         <p class="service-details__text-1">{{ $service->description }}</p>
-                        <p class="service-details__text-2">{!! $service->content !!}</p>
+                        <div class="service-details__text-2">{!! $service->content !!}</div>
                     </div>
                 </div>
             </div>
