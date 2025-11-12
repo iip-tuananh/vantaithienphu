@@ -12,6 +12,7 @@ Banner theo trang
 @endsection
 
 @section('buttons')
+<a href="javascript:void(0)" class="btn btn-outline-success" data-toggle="modal" data-target="#create-banner" class="btn btn-info" ng-click="errors = null"><i class="fa fa-plus"></i> Thêm mới</a>
 @endsection
 @section('content')
 <div ng-cloak>

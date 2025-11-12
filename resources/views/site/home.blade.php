@@ -612,6 +612,55 @@
     </section>
     <!--Testimonials Two End -->
 
+     <!--Project One Start -->
+     <section class="project-one project-two">
+        <div class="project-one__bg-color wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms"></div>
+        <div class="container">
+            <div class="project-one__top">
+                <div class="section-title sec-title-animation animation-style1 text-center">
+                    <div class="section-title__tagline-box">
+                        <span class="section-title__tagline-border"></span>
+                        <div class="section-title__shape-1">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h6 class="section-title__tagline">Thư Viện Ảnh</h6>
+                        <span class="section-title__tagline-border"></span>
+                        <div class="section-title__shape-2">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                    </div>
+                    <h3 class="section-title__title title-animation">Hình Ảnh <span>Hàng Hoá</span> Đã Vận Chuyển
+                    </h3>
+                </div>
+                {{-- <div class="project-one__btn-box">
+                    <a href="" class="thm-btn">view all projects
+                        <span><i class="icon-right-arrow"></i></span>
+                    </a>
+                </div> --}}
+            </div>
+        </div>
+        <div class="project-one__bottom">
+            <div class="container">
+                <div class="project-two__carousel owl-carousel owl-theme">
+                    <!--Project One Single Start-->
+                    @foreach ($galleries as $gallery)
+                    <div class="item">
+                        <div class="project-one__single">
+                            <div class="project-one__img-box">
+                                <div class="project-one__img">
+                                    <img src="{{ $gallery->image ? $gallery->image->path : 'https://placehold.co/600x700' }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    <!--Project One Single End-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Project One End -->
+
 
     <!-- Team Two Start -->
     {{-- <section class="team-two">

@@ -104,6 +104,7 @@ class FrontController extends Controller
         $data['banners'] = Banner::query()->with('image')->whereNull('type')
             ->latest()->get();
         $data['partners'] = Partner::query()->with('image')->latest()->get();
+        $data['galleries'] = Banner::query()->with('image')->where('type', 1)->latest()->get();
 
         return view('site.home', $data);
     }

@@ -415,13 +415,13 @@
                         </a>
                     </li>
 
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a href="{{ route('bannerPages.index') }}"
                             class="nav-link {{ Request::routeIs('bannerPages.index') ? 'active' : '' }}">
                             <i class="far fas  fa-angle-right nav-icon"></i>
-                            <p>Danh mục banner theo trang</p>
+                            <p>Thư viện ảnh</p>
                         </a>
-                    </li> --}}
+                    </li>
 
 
 
