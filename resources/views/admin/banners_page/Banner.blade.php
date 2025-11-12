@@ -29,6 +29,7 @@
                 title: this.title,
                 link: this.link,
                 intro: this.intro,
+                type: 1,
             }
 
             data = jsonToFormData(data);

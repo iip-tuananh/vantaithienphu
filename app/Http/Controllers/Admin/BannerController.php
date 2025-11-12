@@ -93,6 +93,7 @@ class  BannerController extends Controller
             $object->link = $request->link;
             $object->intro = $request->intro;
             $object->sub_intro = $request->sub_intro;
+            $object->type = $request->type ?? null;
             $object->created_by = auth()->id();
             $object->save();
 
@@ -146,6 +147,7 @@ class  BannerController extends Controller
             $object->link = $request->link;
             $object->intro = $request->intro;
             $object->sub_intro = $request->sub_intro;
+            $object->type = $request->type ?? null;
             $object->save();
 
             if ($request->image) {
